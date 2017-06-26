@@ -1,0 +1,451 @@
+/*----------------------- Reset -------------------------*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+input, textarea {
+    outline: 0;
+}
+/*------------------------ Fonts ------------------------*/
+@font-face {
+  font-family: "FontAwesome";
+  font-style: normal;
+  font-weight: normal;
+  src:  url("../fonts/FontAwesome/fontawesome-webfont.eot?#iefix") format("embedded-opentype"),
+        url("../fonts/FontAwesome/fontawesome-webfont.woff") format("woff"),
+        url("../fonts/FontAwesome/fontawesome-webfont.ttf") format("truetype");
+}
+@font-face {
+  font-family: "LibreBaskervilleRegular";
+  font-style: normal;
+  font-weight: normal;
+  src:    url("../fonts/LibreBaskerville/regular/LibreBaskerville-Regular.eot?#iefix") format("embedded-opentype"),
+          url("../fonts/LibreBaskerville/regular/LibreBaskerville-Regular.woff") format("woff"),
+          url("../fonts/LibreBaskerville/regular/LibreBaskerville-Regular.ttf") format("truetype"),
+          url("../fonts/LibreBaskerville/regular/LibreBaskerville-Regular.svg") format('svg');
+}
+@font-face {
+  font-family: "LibreBaskervilleBold";
+  font-style: normal;
+  font-weight: normal;
+  src:    url("../fonts/LibreBaskerville/bold/LibreBaskerville-Bold.eot?#iefix") format("embedded-opentype"),
+          url("../fonts/LibreBaskerville/bold/LibreBaskerville-Bold.woff") format("woff"),
+          url("../fonts/LibreBaskerville/bold/LibreBaskerville-Bold.ttf") format("truetype"),
+          url("../fonts/LibreBaskerville/bold/LibreBaskerville-Bold.svg") format('svg');
+}
+@font-face {
+  font-family: "Sacramento";
+  font-style: normal;
+  font-weight: normal;
+  src:    url("../fonts/Sacramento/Sacramento-Regular.eot?#iefix") format("embedded-opentype"),
+          url("../fonts/Sacramento/Sacramento-Regular.woff") format("woff"),
+          url("../fonts/Sacramento/Sacramento-Regular.ttf") format("truetype"),
+          url("../fonts/Sacramento/Sacramento-Regular.svg") format('svg');
+}
+@font-face {
+  font-family: "PoppinsRegular";
+  font-style: normal;
+  font-weight: normal;
+  src:    url("../fonts/Poppins/regular/Poppins-Regular.eot?#iefix") format("embedded-opentype"),
+          url("../fonts/Poppins/regular/Poppins-Regular.woff") format("woff"),
+          url("../fonts/Poppins/regular/Poppins-Regular.ttf") format("truetype"),
+          url("../fonts/Poppins/regular/Poppins-Regular.svg") format('svg');
+}
+@font-face {
+  font-family: "PoppinsMedium";
+  font-style: normal;
+  font-weight: normal;
+  src:    url("../fonts/Poppins/medium/Poppins-Medium.eot?#iefix") format("embedded-opentype"),
+          url("../fonts/Poppins/medium/Poppins-Medium.woff") format("woff"),
+          url("../fonts/Poppins/medium/Poppins-Medium.ttf") format("truetype"),
+          url("../fonts/Poppins/medium/Poppins-Medium.svg") format('svg');
+}
+@font-face {
+  font-family: "PoppinsSemiBold";
+  font-style: normal;
+  font-weight: normal;
+  src:    url("../fonts/Poppins/semibold/Poppins-SemiBold.eot?#iefix") format("embedded-opentype"),
+          url("../fonts/Poppins/semibold/Poppins-SemiBold.woff") format("woff"),
+          url("../fonts/Poppins/semibold/Poppins-SemiBold.ttf") format("truetype"),
+          url("../fonts/Poppins/semibold/Poppins-SemiBold.svg") format('svg');
+}
+@font-face {
+  font-family: "Wisdom";
+  font-style: normal;
+  font-weight: normal;
+  src:    url("../fonts/Wisdom/wisdom_script.eot?#iefix") format("embedded-opentype"),
+          url("../fonts/Wisdom/wisdom_script.woff") format("woff"),
+          url("../fonts/Wisdom/wisdom_script.ttf") format("truetype"),
+          url("../fonts/Wisdom/wisdom_script.svg") format('svg');
+}
+/*-------------------- Common settings ------------------*/
+#main {
+	font-family: PoppinsRegular, Arial, sans-serif;
+    width: 100%;
+	max-width: 1920px;
+	background-color: #fff;
+}
+.section {
+    overflow: hidden;
+}
+/*------ 4 colored line -------*/
+.color_line {
+    width: 100%;
+    overflow: hidden;
+}
+#about .color_line {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+#portfolio .color_line {
+    position: absolute;
+    left: 0;
+    bottom: 63px;
+}
+.color_line span{
+    width: 25%;
+    float: left;
+}
+.color_line #red { border-bottom: 3px solid #fc5f45; }
+.color_line #green { border-bottom: 3px solid #38c695; }
+.color_line #purple { border-bottom: 3px solid #b27cf5; }
+.color_line #yellow { border-bottom: 3px solid #feb960; }
+/*----------------------- Header -----------------------*/
+#header {
+    width: 100%;
+    height: 850px;
+    background: url("../img/header_bg.png") center center no-repeat;
+}
+#navigation {
+    position: fixed;
+    width: 100%;
+    height: 75px;
+/*    background-color: #3D3E48;*/
+    z-index: 99;
+    transition: all 0.5s;
+}
+#navigation .content_row {
+    padding: 0 15px;
+}
+#logo {
+    font-family: Wisdom;
+    font-size: 35px;
+    line-height: 75px;
+}
+#logo a {
+    color: #fff;
+}
+#logo span {
+    color:  #fc5f45;
+    text-transform: uppercase;
+}
+#navigation ul li {
+    display: inline-block;   
+}
+#navigation ul li a {
+    font-family: PoppinsMedium;
+    font-size: 14px;
+    padding: 11px;
+    text-transform: capitalize;
+    line-height: 75px;
+    -webkit-transition: all 0.5s;-o-transition: all 0.5s;transition: all 0.5s;
+}
+.no_scroll ul li a:hover {
+    color: #FE8673;
+    -webkit-transition: all 0.5s;-o-transition: all 0.5s;transition: all 0.5s;
+}
+.no_scroll { background-color: transparent; }
+.no_scroll ul li a { color: #fff; }
+.scrolled {
+    background-color: #fff;
+    -webkit-box-shadow: 0px 0px 24px 0px rgba(0, 0, 0, 0.25);box-shadow: 0px 0px 24px 0px rgba(0, 0, 0, 0.25);
+    -webkit-transition: all 0.5s;transition: all 0.5s;
+}
+#header .scrolled ul li a:hover {
+    color: #FE8673;
+    -webkit-transition: all 0.5s;-o-transition: all 0.5s;transition: all 0.5s;
+}
+#header .scrolled ul li a { color: #3D3E48; }
+#header #navigation .content_row {
+    position: relative;
+}
+#menu_link {
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #fff;
+/*    border: 1px solid #333;*/
+    position: absolute;
+    top: 17.5px;
+    right: 20px;
+    cursor: pointer;
+    -webkit-box-shadow: 1px 1px 10px rgba(0,0,0,.4);
+    box-shadow: 1px 1px 10px rgba(0,0,0,.4);
+}
+#menu_link span, #menu_link span:before, #menu_link span:after {
+    display: block;
+    width: 18px;
+    height: 2px;
+    background-color: #3D3E48;
+    position: absolute;
+    left: 50%;
+    margin-left: -9px;
+    top: 50%;
+    margin-top: -1px;
+}
+#menu_link span:before {
+    transition: all 0.5s;
+    content: '';
+    margin-top: -6px;
+}
+#menu_link span:after {
+    transition: all 0.5s;
+    content: '';
+    margin-top: 4px;
+}
+#header .menu_active span {
+    background-color: transparent;
+}
+#header .menu_active span:before {
+    transform: rotate(135deg);
+    margin-top: 0;
+}
+#header .menu_active span:after {
+    transform: rotate(-135deg);
+    margin-top: 0;
+}
+#header h1 {
+    color: #fff;
+    font-family: LibreBaskervilleRegular;
+    font-size: 60px;
+    line-height: 85px;
+    text-align: center;
+    padding: 225px 0 50px 0;
+/*    padding: 14.21351863550221% 0 50px 0;*/
+    max-width: 820px; 
+}
+#header #our_works{
+    border: 1px solid #616161;
+    width: 180px;
+    height: 50px;
+    background-color:  #fc5f45;
+    border-radius: 50px;
+    text-align: center;
+    line-height: 50px;
+    color: #fff;
+    -webkit-transition: 0.5s;-o-transition: 0.5s;transition: 0.5s;
+    font-family: PoppinsSemiBold;
+    font-size: 16px;
+}
+#header #our_works:hover {
+    background-color: #fff;
+    color: #616161;
+    -webkit-box-shadow: 1px 1px 4px rgba(255, 255, 255, 0.8);box-shadow: 1px 1px 4px rgba(255, 255, 255, 0.8);
+    -webkit-transition: 0.5s;-o-transition: 0.5s;transition: 0.5s;
+}
+/*----------------------- Header -----------------------*/
+#header {
+    width: 100%;
+    height: 850px;
+    background: url("../img/header_bg.png") center center no-repeat;
+}
+#navigation {
+    position: fixed;
+    width: 100%;
+    height: 75px;
+    z-index: 99;
+    transition: all 0.5s;
+}
+#navigation .content_row {
+    padding: 0 15px;
+}
+#logo {
+    font-family: Wisdom;
+    font-size: 35px;
+    line-height: 75px;
+}
+#logo a {
+    color: #fff;
+}
+#logo span {
+    color:  #fc5f45;
+    text-transform: uppercase;
+}
+#navigation ul li {
+    display: inline-block;   
+}
+#navigation ul li a {
+    font-family: PoppinsMedium;
+    font-size: 14px;
+    padding: 11px;
+    text-transform: capitalize;
+    line-height: 75px;
+    -webkit-transition: all 0.5s;-o-transition: all 0.5s;transition: all 0.5s;
+}
+.no_scroll ul li a:hover {
+    color: #FE8673;
+    -webkit-transition: all 0.5s;-o-transition: all 0.5s;transition: all 0.5s;
+}
+.no_scroll { background-color: transparent; }
+.no_scroll ul li a { color: #fff; }
+.scrolled {
+    background-color: #fff;
+    -webkit-box-shadow: 0px 0px 24px 0px rgba(0, 0, 0, 0.25);box-shadow: 0px 0px 24px 0px rgba(0, 0, 0, 0.25);
+    -webkit-transition: all 0.5s;transition: all 0.5s;
+}
+#header .scrolled ul li a:hover {
+    color: #FE8673;
+    -webkit-transition: all 0.5s;-o-transition: all 0.5s;transition: all 0.5s;
+}
+#header .scrolled ul li a { color: #3D3E48; }
+#header #navigation .content_row {
+    position: relative;
+}
+#menu_link {
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #fff;
+/*    border: 1px solid #333;*/
+    position: absolute;
+    top: 17.5px;
+    right: 20px;
+    cursor: pointer;
+    -webkit-box-shadow: 1px 1px 10px rgba(0,0,0,.4);
+    box-shadow: 1px 1px 10px rgba(0,0,0,.4);
+}
+#menu_link span, #menu_link span:before, #menu_link span:after {
+    display: block;
+    width: 18px;
+    height: 2px;
+    background-color: #3D3E48;
+    position: absolute;
+    left: 50%;
+    margin-left: -9px;
+    top: 50%;
+    margin-top: -1px;
+}
+#menu_link span:before {
+    transition: all 0.5s;
+    content: '';
+    margin-top: -6px;
+}
+#menu_link span:after {
+    transition: all 0.5s;
+    content: '';
+    margin-top: 4px;
+}
+#header .menu_active span {
+    background-color: transparent;
+}
+#header .menu_active span:before {
+    transform: rotate(135deg);
+    margin-top: 0;
+}
+#header .menu_active span:after {
+    transform: rotate(-135deg);
+    margin-top: 0;
+}
+#header h1 {
+    color: #fff;
+    font-family: LibreBaskervilleRegular;
+    font-size: 60px;
+    line-height: 85px;
+    text-align: center;
+    padding: 225px 0 50px 0;
+/*    padding: 14.21351863550221% 0 50px 0;*/
+    max-width: 820px; 
+}
+#header #our_works{
+    border: 1px solid #616161;
+    width: 180px;
+    height: 50px;
+    background-color:  #fc5f45;
+    border-radius: 50px;
+    text-align: center;
+    line-height: 50px;
+    color: #fff;
+    -webkit-transition: 0.5s;-o-transition: 0.5s;transition: 0.5s;
+    font-family: PoppinsSemiBold;
+    font-size: 16px;
+}
+#header #our_works:hover {
+    background-color: #fff;
+    color: #616161;
+    -webkit-box-shadow: 1px 1px 4px rgba(255, 255, 255, 0.8);box-shadow: 1px 1px 4px rgba(255, 255, 255, 0.8);
+    -webkit-transition: 0.5s;-o-transition: 0.5s;transition: 0.5s;
+}
+/*------------------------ Media ------------------------*/
+@media screen and (max-width: 1199px) {
+    
+}
+@media screen and (max-width: 991px) {
+    
+@media screen and (max-width: 767px){
+    
+}
+@media screen and (max-width: 479px) {
+
+}
+/*https://speckyboy.com/responsive-navigation-jquery-plugins/*/
+/*
+Optimization
+1. Add class to box-shadows
+2. Change hover animate from CSS to jQuery methods
+3. Divide font classe in 2 single classe, with settings of ff and fz and color
+4. Fix subscribe button
+5. Fix blog columns layout
+*/
+/*
+/* https://habrahabr.ru/post/142534/ */
+/* https://habrahabr.ru/post/52201/ */
+/* https://jqbook.net.ru/jquery/Effects */
+/* https://jquery-docs.ru/animate/ */
+/* http://www.cssdrive.com/cssautoprefixer/ */
+/* http://dabblet.com/gist/3618519 */
+/* https://habrahabr.ru/company/odnoklassniki/blog/158917/ */
+/* http://operatino.github.io/MCSS/ */
+/* https://stackoverflow.com/questions/15731879/jquery-add-remove-class-with-fadein-out */
+/*  */
