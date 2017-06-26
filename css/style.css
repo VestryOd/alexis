@@ -1,4 +1,4 @@
-/*----------------------- Reset -------------------------*/
+/*------------------------------------ Reset --------------------------------------*/
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -45,7 +45,7 @@ table {
 input, textarea {
     outline: 0;
 }
-/*------------------------ Fonts ------------------------*/
+/*------------------------------------ Fonts ------------------------------------*/
 @font-face {
   font-family: "FontAwesome";
   font-style: normal;
@@ -117,7 +117,8 @@ input, textarea {
           url("../fonts/Wisdom/wisdom_script.ttf") format("truetype"),
           url("../fonts/Wisdom/wisdom_script.svg") format('svg');
 }
-/*-------------------- Common settings ------------------*/
+/*-------------------------------- Common settings ---------------------------------*/
+/* ------------------------------ Layout */
 #main {
 	font-family: PoppinsRegular, Arial, sans-serif;
     width: 100%;
@@ -126,6 +127,64 @@ input, textarea {
 }
 .section {
     overflow: hidden;
+    background-color: #fff;
+    text-align: center;
+}
+#header, #about {
+    text-align: left;
+}
+.content_row {
+    max-width: 1200px;
+    padding: 145px 15px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+/* ------------------------------ Blocks */
+/*------ Center alignment ------*/
+#header h1, #header a, #header #pluses_row {
+    display: block;
+    margin: 0 auto;
+}
+/*------ Left alignment ------*/
+#logo, #pluses_row div, .color_line span {
+    float: left;
+}
+/*------ Right alignment ------*/
+#navigation ul {
+    float: right;
+}
+/* ------------------------------ Cosmetics */
+/*------ transition all ------*/
+#navigation, #navigation ul li a, .no_scroll ul li a:hover, .scrolled,
+#header .scrolled ul li a:hover, #header #our_works, #header #our_works:hover,
+#menu_link span:before, #menu_link span:after{
+    -webkit-transition: all 0.5s;
+       -moz-transition: all 0.5s;
+         -o-transition: all 0.5s;
+            transition: all 0.5s;
+}
+#main a {
+    text-decoration: none;
+}
+/*------ main color scheme -------*/
+/* Red color*/
+#logo span {
+    color:  #fc5f45;
+}
+#header #our_works {
+    background-color: #fc5f45;
+}
+/* Green color */
+#pluses_row div {
+    color:  #38c695;
+}
+/* Purple color */
+#pluses_row #clock {
+    color:  #b27cf5;
+}
+/* Yellow color */
+#pluses_row #check {
+    color:  #feb960;
 }
 /*------ 4 colored line -------*/
 .color_line {
@@ -142,14 +201,25 @@ input, textarea {
     left: 0;
     bottom: 63px;
 }
-.color_line span{
+.color_line span {
     width: 25%;
-    float: left;
 }
 .color_line #red { border-bottom: 3px solid #fc5f45; }
 .color_line #green { border-bottom: 3px solid #38c695; }
 .color_line #purple { border-bottom: 3px solid #b27cf5; }
 .color_line #yellow { border-bottom: 3px solid #feb960; }
+/* ---------------------------- */
+/* White color */
+#logo a, .no_scroll ul li a, #header h1, #header #our_works {
+    color: #fff;
+}
+.scrolled, #menu_link, #header #our_works:hover {
+    background-color: #fff;
+}
+/* Red hover color */
+.no_scroll ul li a:hover, #header .scrolled ul li a:hover {
+    color: #FE8673;
+}
 /*----------------------- Header -----------------------*/
 #header {
     width: 100%;
@@ -160,9 +230,7 @@ input, textarea {
     position: fixed;
     width: 100%;
     height: 75px;
-/*    background-color: #3D3E48;*/
     z-index: 99;
-    transition: all 0.5s;
 }
 #navigation .content_row {
     padding: 0 15px;
@@ -172,11 +240,7 @@ input, textarea {
     font-size: 35px;
     line-height: 75px;
 }
-#logo a {
-    color: #fff;
-}
 #logo span {
-    color:  #fc5f45;
     text-transform: uppercase;
 }
 #navigation ul li {
@@ -188,22 +252,10 @@ input, textarea {
     padding: 11px;
     text-transform: capitalize;
     line-height: 75px;
-    -webkit-transition: all 0.5s;-o-transition: all 0.5s;transition: all 0.5s;
-}
-.no_scroll ul li a:hover {
-    color: #FE8673;
-    -webkit-transition: all 0.5s;-o-transition: all 0.5s;transition: all 0.5s;
 }
 .no_scroll { background-color: transparent; }
-.no_scroll ul li a { color: #fff; }
 .scrolled {
-    background-color: #fff;
     -webkit-box-shadow: 0px 0px 24px 0px rgba(0, 0, 0, 0.25);box-shadow: 0px 0px 24px 0px rgba(0, 0, 0, 0.25);
-    -webkit-transition: all 0.5s;transition: all 0.5s;
-}
-#header .scrolled ul li a:hover {
-    color: #FE8673;
-    -webkit-transition: all 0.5s;-o-transition: all 0.5s;transition: all 0.5s;
 }
 #header .scrolled ul li a { color: #3D3E48; }
 #header #navigation .content_row {
@@ -214,8 +266,6 @@ input, textarea {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background-color: #fff;
-/*    border: 1px solid #333;*/
     position: absolute;
     top: 17.5px;
     right: 20px;
@@ -235,12 +285,10 @@ input, textarea {
     margin-top: -1px;
 }
 #menu_link span:before {
-    transition: all 0.5s;
     content: '';
     margin-top: -6px;
 }
 #menu_link span:after {
-    transition: all 0.5s;
     content: '';
     margin-top: 4px;
 }
@@ -256,166 +304,49 @@ input, textarea {
     margin-top: 0;
 }
 #header h1 {
-    color: #fff;
     font-family: LibreBaskervilleRegular;
     font-size: 60px;
     line-height: 85px;
     text-align: center;
     padding: 225px 0 50px 0;
-/*    padding: 14.21351863550221% 0 50px 0;*/
     max-width: 820px; 
 }
-#header #our_works{
+#header #our_works {
     border: 1px solid #616161;
     width: 180px;
     height: 50px;
-    background-color:  #fc5f45;
     border-radius: 50px;
     text-align: center;
     line-height: 50px;
-    color: #fff;
-    -webkit-transition: 0.5s;-o-transition: 0.5s;transition: 0.5s;
     font-family: PoppinsSemiBold;
     font-size: 16px;
 }
 #header #our_works:hover {
-    background-color: #fff;
     color: #616161;
-    -webkit-box-shadow: 1px 1px 4px rgba(255, 255, 255, 0.8);box-shadow: 1px 1px 4px rgba(255, 255, 255, 0.8);
-    -webkit-transition: 0.5s;-o-transition: 0.5s;transition: 0.5s;
+    -webkit-box-shadow: 1px 1px 4px rgba(255, 255, 255, 0.8);
+       -moz-box-shadow: 1px 1px 4px rgba(255, 255, 255, 0.8);
+            box-shadow: 1px 1px 4px rgba(255, 255, 255, 0.8);
 }
-/*----------------------- Header -----------------------*/
-#header {
+#pluses_row {
     width: 100%;
-    height: 850px;
-    background: url("../img/header_bg.png") center center no-repeat;
+    max-width: 750px;
+    padding: 85px 0 0 0;
 }
-#navigation {
-    position: fixed;
+#pluses_row div {
+    text-align: center;
+    font-family: PoppinsMedium;
+    font-size: 18px;
     width: 100%;
-    height: 75px;
-    z-index: 99;
-    transition: all 0.5s;
-}
-#navigation .content_row {
-    padding: 0 15px;
-}
-#logo {
-    font-family: Wisdom;
-    font-size: 35px;
-    line-height: 75px;
-}
-#logo a {
-    color: #fff;
-}
-#logo span {
-    color:  #fc5f45;
+    max-width: 250px;
+    padding-top: 78px;
+    background: url("../img/dollar.png") center top no-repeat;
     text-transform: uppercase;
 }
-#navigation ul li {
-    display: inline-block;   
+#pluses_row #clock {
+    background-image: url("../img/clock.png");
 }
-#navigation ul li a {
-    font-family: PoppinsMedium;
-    font-size: 14px;
-    padding: 11px;
-    text-transform: capitalize;
-    line-height: 75px;
-    -webkit-transition: all 0.5s;-o-transition: all 0.5s;transition: all 0.5s;
-}
-.no_scroll ul li a:hover {
-    color: #FE8673;
-    -webkit-transition: all 0.5s;-o-transition: all 0.5s;transition: all 0.5s;
-}
-.no_scroll { background-color: transparent; }
-.no_scroll ul li a { color: #fff; }
-.scrolled {
-    background-color: #fff;
-    -webkit-box-shadow: 0px 0px 24px 0px rgba(0, 0, 0, 0.25);box-shadow: 0px 0px 24px 0px rgba(0, 0, 0, 0.25);
-    -webkit-transition: all 0.5s;transition: all 0.5s;
-}
-#header .scrolled ul li a:hover {
-    color: #FE8673;
-    -webkit-transition: all 0.5s;-o-transition: all 0.5s;transition: all 0.5s;
-}
-#header .scrolled ul li a { color: #3D3E48; }
-#header #navigation .content_row {
-    position: relative;
-}
-#menu_link {
-    display: block;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: #fff;
-/*    border: 1px solid #333;*/
-    position: absolute;
-    top: 17.5px;
-    right: 20px;
-    cursor: pointer;
-    -webkit-box-shadow: 1px 1px 10px rgba(0,0,0,.4);
-    box-shadow: 1px 1px 10px rgba(0,0,0,.4);
-}
-#menu_link span, #menu_link span:before, #menu_link span:after {
-    display: block;
-    width: 18px;
-    height: 2px;
-    background-color: #3D3E48;
-    position: absolute;
-    left: 50%;
-    margin-left: -9px;
-    top: 50%;
-    margin-top: -1px;
-}
-#menu_link span:before {
-    transition: all 0.5s;
-    content: '';
-    margin-top: -6px;
-}
-#menu_link span:after {
-    transition: all 0.5s;
-    content: '';
-    margin-top: 4px;
-}
-#header .menu_active span {
-    background-color: transparent;
-}
-#header .menu_active span:before {
-    transform: rotate(135deg);
-    margin-top: 0;
-}
-#header .menu_active span:after {
-    transform: rotate(-135deg);
-    margin-top: 0;
-}
-#header h1 {
-    color: #fff;
-    font-family: LibreBaskervilleRegular;
-    font-size: 60px;
-    line-height: 85px;
-    text-align: center;
-    padding: 225px 0 50px 0;
-/*    padding: 14.21351863550221% 0 50px 0;*/
-    max-width: 820px; 
-}
-#header #our_works{
-    border: 1px solid #616161;
-    width: 180px;
-    height: 50px;
-    background-color:  #fc5f45;
-    border-radius: 50px;
-    text-align: center;
-    line-height: 50px;
-    color: #fff;
-    -webkit-transition: 0.5s;-o-transition: 0.5s;transition: 0.5s;
-    font-family: PoppinsSemiBold;
-    font-size: 16px;
-}
-#header #our_works:hover {
-    background-color: #fff;
-    color: #616161;
-    -webkit-box-shadow: 1px 1px 4px rgba(255, 255, 255, 0.8);box-shadow: 1px 1px 4px rgba(255, 255, 255, 0.8);
-    -webkit-transition: 0.5s;-o-transition: 0.5s;transition: 0.5s;
+#pluses_row #check {
+    background-image: url("../img/check.png");
 }
 /*------------------------ Media ------------------------*/
 @media screen and (max-width: 1199px) {
@@ -423,29 +354,10 @@ input, textarea {
 }
 @media screen and (max-width: 991px) {
     
+}
 @media screen and (max-width: 767px){
     
 }
 @media screen and (max-width: 479px) {
 
 }
-/*https://speckyboy.com/responsive-navigation-jquery-plugins/*/
-/*
-Optimization
-1. Add class to box-shadows
-2. Change hover animate from CSS to jQuery methods
-3. Divide font classe in 2 single classe, with settings of ff and fz and color
-4. Fix subscribe button
-5. Fix blog columns layout
-*/
-/*
-/* https://habrahabr.ru/post/142534/ */
-/* https://habrahabr.ru/post/52201/ */
-/* https://jqbook.net.ru/jquery/Effects */
-/* https://jquery-docs.ru/animate/ */
-/* http://www.cssdrive.com/cssautoprefixer/ */
-/* http://dabblet.com/gist/3618519 */
-/* https://habrahabr.ru/company/odnoklassniki/blog/158917/ */
-/* http://operatino.github.io/MCSS/ */
-/* https://stackoverflow.com/questions/15731879/jquery-add-remove-class-with-fadein-out */
-/*  */
