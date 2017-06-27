@@ -125,6 +125,11 @@ input, textarea {
 	max-width: 1920px;
 	background-color: #fff;
 }
+#main p, #main ul li {
+    font-size: 15px;
+    line-height: 27px;
+    color:  #616161;
+}
 .section {
     overflow: hidden;
     background-color: #fff;
@@ -140,10 +145,13 @@ input, textarea {
     overflow: hidden;
     position: relative;
 }
-.content_row>p {
+#main .content_row>p {
     font-size: 18px;
     color: #616161;
     padding: 40px 40px 80px 40px;
+}
+#main #team, #main #pricing {
+    background-color: #eeeeee;
 }
 /* ------------------------------ Blocks */
 /*------ Center alignment ------*/
@@ -165,21 +173,19 @@ input, textarea {
     color:  #313131;
     margin: 0;
 }
+.mrg_top_50 {
+    margin-top: 50px;
+}
 /* ------------------------------ Cosmetics */
 /*---------- fonts -----------*/
 .poppins_reg { font-family: PoppinsRegular; }
 .poppins_med { font-family: PoppinsMedium; }
-.fz_15 {
-    font-size: 15px;
-    line-height: 27px;
-    color:  #616161;
-}
 .fz_18 { font-size: 18px; }
 .fz_20 { font-size: 20px; }
+.fz_25 { font-size: 25px; }
 /*------ transition all ------*/
-#navigation, #navigation ul li a, .no_scroll ul li a:hover, .scrolled,
-#header .scrolled ul li a:hover, #header #our_works, #header #our_works:hover,
-#menu_link span:before, #menu_link span:after {
+#navigation, #navigation ul li a, .no_scroll ul li a:hover, .scrolled, #header .scrolled ul li a:hover, #header #our_works, #header #our_works:hover,
+#menu_link span:before, #menu_link span:after, #pricing #starter a:hover, #pricing #ultimate a:hover, #pricing #professional a:hover, .start_button {
     -webkit-transition: all 0.5s;
        -moz-transition: all 0.5s;
          -o-transition: all 0.5s;
@@ -192,32 +198,38 @@ input, textarea {
             transition: opacity 0.5s;
 }
 /*------ shadow ------*/
-#about_inf, .focus_block, #portfolio .img_box {
-    -webkit-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
-       -moz-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
-            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+#about_inf, .focus_block, #portfolio .img_box, #team .team_member, .scrolled, .step_block .step_descr, #pricing .price_column {
+    -webkit-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+       -moz-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
 }
 #main a {
     text-decoration: none;
 }
 /*------ main color scheme -------*/
 /* Red color*/
-#logo span {
+#logo span, #michael, #pricing #ultimate a {
     color:  #fc5f45;
 }
-#header #our_works {
+#header #our_works, #pricing #ultimate a:hover {
     background-color: #fc5f45;
 }
 /* Green color */
-#pluses_row div {
+#pluses_row div, #david, #pricing #starter a {
     color:  #38c695;
 }
+#pricing #starter a:hover {
+    background-color: #38c695;
+}
 /* Purple color */
-#pluses_row #clock {
+#pluses_row #clock, #anna, #pricing #professional a {
     color:  #b27cf5;
 }
+#pricing #professional a:hover {
+    background-color: #b27cf5;
+}
 /* Yellow color */
-#pluses_row #check {
+#pluses_row #check, #jason {
     color:  #feb960;
 }
 /*------ 4 colored line -------*/
@@ -238,16 +250,24 @@ input, textarea {
 .color_line span {
     width: 25%;
 }
-.color_line #red { border-bottom: 3px solid #fc5f45; }
-.color_line #green { border-bottom: 3px solid #38c695; }
-.color_line #purple { border-bottom: 3px solid #b27cf5; }
-.color_line #yellow { border-bottom: 3px solid #feb960; }
+.color_line #red, #michael, #step_01 {
+    border-bottom: 3px solid #fc5f45;
+}
+.color_line #green, #david, #step_02 {
+    border-bottom: 3px solid #38c695;
+}
+.color_line #purple, #anna, #step_03 {
+    border-bottom: 3px solid #b27cf5;
+}
+.color_line #yellow, #jason, #step_04 {
+    border-bottom: 3px solid #feb960;
+}
 /* ---------------------------- */
 /* White color */
-#logo a, .no_scroll ul li a, #header h1, #header #our_works {
+#logo a, .no_scroll ul li a, #header h1, #header #our_works, #pricing #starter a:hover, #pricing #ultimate a:hover, #pricing #professional a:hover {
     color: #fff;
 }
-.scrolled, #menu_link, #header #our_works:hover {
+.scrolled, #menu_link, #header #our_works:hover, #team .team_member, #team .member_info, #main #steps, #steps .step_block .step_descr, #pricing .price_column {
     background-color: #fff;
 }
 /* Red hover color */
@@ -287,11 +307,12 @@ input, textarea {
     text-transform: capitalize;
     line-height: 75px;
 }
-.no_scroll { background-color: transparent; }
-.scrolled {
-    -webkit-box-shadow: 0px 0px 24px 0px rgba(0, 0, 0, 0.25);box-shadow: 0px 0px 24px 0px rgba(0, 0, 0, 0.25);
+.no_scroll {
+    background-color: transparent;
 }
-#header .scrolled ul li a { color: #3D3E48; }
+#header .scrolled ul li a {
+    color: #3D3E48;
+}
 #menu_link {
     display: block;
     width: 40px;
@@ -480,6 +501,238 @@ input, textarea {
 }
 #portfolio .img_box:hover .img_hover {
     opacity: 1;
+}
+/*-------------------------------------- Team --------------------------------------*/
+#team {
+    background: url("../img/numbers/04.png") center top no-repeat;
+}
+#team .team_member {
+    padding: 5px;
+    display: block;
+    cursor: pointer;
+}
+#team .team_member img {
+    max-width: 270px;
+    width: 100%;
+}
+.caption h4 {
+    font-size: 18px;
+    margin: 0;
+    padding: 15px 0 5px 0;
+}
+.caption p {
+    font-size: 14px;
+    margin: 0;
+    padding: 4px 0 7px 0;
+}
+.member_info {
+    padding: 80px 100px;
+    text-align: left;
+    position: relative;
+    display: none;
+}
+.about_member {
+    padding-right: 130px;
+}
+.about_member h4 {
+    padding-bottom: 35px;
+}
+.about_member p {
+    padding-right: 180px;
+    border-right: 2px solid #efefef;
+    background: url(../img/team/share.svg) 95.83333333333333% center no-repeat;
+}
+.member_links {
+    position: absolute;
+    right: 100px;
+    top: 135px;
+    padding: 24px;
+}
+.member_links ul li {
+    padding: 3px;
+    display: block;
+}
+.member_links ul li a {
+    color:  #616161;
+    -webkit-transition: color 0.5s;-o-transition: color 0.5s;-moz-transition: color 0.5s;transition: color 0.5s;
+}
+.member_links ul li a:hover {
+    color:  #FE8673;
+    -webkit-transition: color 0.5s;-o-transition: color 0.5s;-moz-transition: color 0.5s;transition: color 0.5s;
+}
+.member_links ul li span {
+    font-family: FontAwesome;
+    padding-right: 5px;
+}
+.triangle {
+    content: '';
+    border: 40px solid transparent;
+    border-bottom-color: #fff;
+    position: absolute;
+    left: 36.66666666666667%;
+    bottom: -50px;
+}
+#david .triangle, #anna .triangle, #jason .triangle {
+    display: none;
+}
+.show {
+    display: block;
+}
+/*------------------------------------- Stats --------------------------------------*/
+#stats {
+    background: url("../img/stats/stats.png") center top no-repeat;
+    width: 100%;
+}
+#main #stats .regerds_row {
+    padding: 110px 0;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+#stats .regard { margin: 20px 0; }
+#stats .regard p {
+    color: rgba(254, 254, 254, 0.8);
+    text-align: center;
+}
+#stats .regard .poppins_med {
+    padding: 80px 0 15px 0;
+    background: url("../img/stats/project.svg") center top no-repeat;
+}
+#stats .regard .color_dot {
+    padding: 15px 0 55px 0;
+    background: url("../img/stats/red-ring.svg") center bottom no-repeat;
+}
+#stats #clients .poppins_med { background: url("../img/stats/clients.svg") center top no-repeat; }
+#stats #clients .color_dot { background: url("../img/stats/green-ring.svg")center bottom no-repeat; }
+#stats #feedbacks .poppins_med { background: url("../img/stats/feeds.svg") center top no-repeat; }
+#stats #feedbacks .color_dot { background: url("../img/stats/purple-ring.svg")center bottom no-repeat; }
+#stats #freebies .poppins_med { background: url("../img/stats/bies.svg") center top no-repeat; }
+#stats #freebies .color_dot { background: url("../img/stats/yellow-ring.svg")center bottom no-repeat; }
+/*---------------------------------- How we work -----------------------------------*/
+#steps {
+    background: url("../img/numbers/05.png") center top no-repeat;
+}
+#steps_section {
+    max-width: 1140px
+    padding: 50px 30px 150px 30px;
+}
+.step_block {
+    position: relative;
+}
+#steps_section .step_block {
+    width: 100%;
+}
+#steps_section .step_block img {
+    display: block;
+    width: 100%;
+    max-width: 556px;
+    margin: 0 auto;
+}
+.step_block .step_descr {
+    background: url("../img/steps/step_01.png") 32px 41px no-repeat;
+    max-width: 458px;
+    max-height: 301px;
+    text-align: left;
+    padding: 48px 60px 64px 120px;
+    position: absolute;
+}
+.step_block .step_descr h4 {
+    padding-bottom: 24px;
+}
+.step_block #step_01, .step_block #step_03 {
+    left: 0;
+    top: -50px;
+}
+.step_block #step_02, .step_block #step_04 {
+    right: 0;
+    top: -50px;
+}
+.step_block #step_02 {
+    background: url("../img/steps/step_02.png") 32px 41px no-repeat;
+}
+.step_block #step_03 {
+    background: url("../img/steps/step_03.png") 32px 41px no-repeat;
+}
+.step_block #step_04 {
+    background: url("../img/steps/step_04.png") 32px 41px no-repeat;
+}
+/*------------------------------------ Pricing -------------------------------------*/
+#pricing {
+    background: url("../img/numbers/06.png") center top no-repeat;
+}
+#pricing .price_column {
+    border-top: 3px solid #38c695;
+    padding: 40px 0;
+}
+#pricing #ultimate {
+    border-top: 3px solid #fc5f45;
+}
+#pricing #professional {
+    border-top: 3px solid #b27cf5;
+}
+#pricing .price_column h4 { padding-bottom: 32px; }
+#pricing .price_column ul {
+    font-family: PoppinsRegular;
+    font-size: 15px;
+    margin: 0;
+    padding: 40px 0;
+}
+#pricing .price_column ul li {
+    color:  #272727;
+    line-height: 40px;
+}
+#pricing .price_column .price {
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 3px;
+    border-color:  #ffffff;
+    box-sizing: border-box;
+    width: 106px;
+    height: 106px;
+    margin: 0 auto;
+    font-family: PoppinsRegular;
+    font-size: 13px;
+    color: #ffffff;
+    padding: 27px 15px;
+    background-color:  #38c695;
+    -webkit-box-shadow: 0px 0px 0px 3px #38c695;
+       -moz-box-shadow: 0px 0px 0px 3px #38c695;
+            box-shadow: 0px 0px 0px 3px #38c695;
+}
+#pricing #ultimate .price {
+    background-color:  #fc5f45;
+    -webkit-box-shadow: 0px 0px 0px 3px #fc5f45;
+       -moz-box-shadow: 0px 0px 0px 3px #fc5f45;
+            box-shadow: 0px 0px 0px 3px #fc5f45;
+}
+#pricing #professional .price {
+    background-color:  #b27cf5;
+    -webkit-box-shadow: 0px 0px 0px 3px #b27cf5;
+       -moz-box-shadow: 0px 0px 0px 3px #b27cf5;
+            box-shadow: 0px 0px 0px 3px #b27cf5;
+}
+#pricing .price_column .price strong { font-size: 25px; }
+#pricing .price_column ul strong { font-family: PoppinsMedium; }
+#pricing .price_column ul span { font-family: FontAwesome; }
+.start_button {
+    margin: 0 auto;
+    display: block;
+    width: 180px;
+    height: 50px;
+    border-radius: 25px;
+    background-color: #fff;
+    border: 2px solid #38c695;
+    text-align: center;
+    font-family: PoppinsSemiBold;
+    font-size: 16px;
+    line-height: 46px;
+    text-transform: uppercase;
+}
+#pricing #ultimate a {
+    border: 2px solid #fc5f45;
+}
+#pricing #professional a {
+    border: 2px solid #b27cf5;
 }
 /*------------------------ Media ------------------------*/
 @media screen and (max-width: 1199px) {
