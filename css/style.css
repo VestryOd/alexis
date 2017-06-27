@@ -138,6 +138,12 @@ input, textarea {
     padding: 145px 15px;
     margin: 0 auto;
     overflow: hidden;
+    position: relative;
+}
+.content_row>p {
+    font-size: 18px;
+    color: #616161;
+    padding: 40px 40px 80px 40px;
 }
 /* ------------------------------ Blocks */
 /*------ Center alignment ------*/
@@ -153,15 +159,43 @@ input, textarea {
 #navigation ul {
     float: right;
 }
+.content_row h3 {
+    font-family: LibreBaskervilleBold;
+    font-size: 50px;
+    color:  #313131;
+    margin: 0;
+}
 /* ------------------------------ Cosmetics */
+/*---------- fonts -----------*/
+.poppins_reg { font-family: PoppinsRegular; }
+.poppins_med { font-family: PoppinsMedium; }
+.fz_15 {
+    font-size: 15px;
+    line-height: 27px;
+    color:  #616161;
+}
+.fz_18 { font-size: 18px; }
+.fz_20 { font-size: 20px; }
 /*------ transition all ------*/
 #navigation, #navigation ul li a, .no_scroll ul li a:hover, .scrolled,
 #header .scrolled ul li a:hover, #header #our_works, #header #our_works:hover,
-#menu_link span:before, #menu_link span:after{
+#menu_link span:before, #menu_link span:after {
     -webkit-transition: all 0.5s;
        -moz-transition: all 0.5s;
          -o-transition: all 0.5s;
             transition: all 0.5s;
+}
+#portfolio .img_hover, #portfolio .img_box:hover .img_hover {
+    -webkit-transition: opacity 0.5s;
+       -moz-transition: opacity 0.5s;
+         -o-transition: opacity 0.5s;
+            transition: opacity 0.5s;
+}
+/*------ shadow ------*/
+#about_inf, .focus_block, #portfolio .img_box {
+    -webkit-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+       -moz-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
 }
 #main a {
     text-decoration: none;
@@ -220,7 +254,7 @@ input, textarea {
 .no_scroll ul li a:hover, #header .scrolled ul li a:hover {
     color: #FE8673;
 }
-/*----------------------- Header -----------------------*/
+/*------------------------------------- Header -------------------------------------*/
 #header {
     width: 100%;
     height: 850px;
@@ -249,7 +283,7 @@ input, textarea {
 #navigation ul li a {
     font-family: PoppinsMedium;
     font-size: 14px;
-    padding: 11px;
+    padding: 0 11px;
     text-transform: capitalize;
     line-height: 75px;
 }
@@ -258,9 +292,6 @@ input, textarea {
     -webkit-box-shadow: 0px 0px 24px 0px rgba(0, 0, 0, 0.25);box-shadow: 0px 0px 24px 0px rgba(0, 0, 0, 0.25);
 }
 #header .scrolled ul li a { color: #3D3E48; }
-#header #navigation .content_row {
-    position: relative;
-}
 #menu_link {
     display: block;
     width: 40px;
@@ -271,7 +302,8 @@ input, textarea {
     right: 20px;
     cursor: pointer;
     -webkit-box-shadow: 1px 1px 10px rgba(0,0,0,.4);
-    box-shadow: 1px 1px 10px rgba(0,0,0,.4);
+       -moz-box-shadow: 1px 1px 10px rgba(0,0,0,.4);
+            box-shadow: 1px 1px 10px rgba(0,0,0,.4);
 }
 #menu_link span, #menu_link span:before, #menu_link span:after {
     display: block;
@@ -347,6 +379,107 @@ input, textarea {
 }
 #pluses_row #check {
     background-image: url("../img/check.png");
+}
+/*-------------------------------------- About -------------------------------------*/
+#about_img {
+    max-width: 555px;
+    background: url("../img/about_bg.jpg") left top repeat-x;
+    position: absolute;
+}
+#about_img img{
+    padding: 10px;
+    width: 100%;
+}
+#about_inf {
+    float: right;
+    position: relative;
+    background: url("../img/numbers/01.png") left top no-repeat;
+    background-color: #fff;
+    padding: 95px 85px;
+    margin: 75px 0;
+    max-width: 652px;
+}
+#about_inf h3, #about_inf p {
+    margin: 0;
+    text-align: left;
+}
+#about_inf p {
+    padding: 10px 0;
+}
+/*-------------------------------------- Focus -------------------------------------*/
+#focus {
+    background: url("../img/numbers/02.png") center top no-repeat;
+    background-color: #eeeeee;
+    text-align: center;
+}
+.focus_block {
+    background: url("../img/focus/web.png") center 64px no-repeat;
+    background-color:  #ffffff;
+    border-bottom: 3px solid #fc5f45;
+    padding: 138px 32px 67px 32px;
+}
+.focus_block h4 {
+    padding-bottom: 32px;
+}
+#ux {
+    background: url("../img/focus/ux.png") center 64px no-repeat;
+    background-color:  #ffffff;
+    border-bottom-color: #38c695;
+}
+#photo {
+    background: url("../img/focus/photo.png") center 64px no-repeat;
+    background-color:  #ffffff;
+    border-bottom-color: #b27cf5;
+}
+#app {
+    background: url("../img/focus/app.png") center 64px no-repeat;
+    background-color:  #ffffff;
+    border-bottom-color: #feb960;
+}
+/*------------------------------------ Portfolio -----------------------------------*/
+#portfolio {
+    background: url("../img/numbers/03.png") center top no-repeat;
+}
+#portfolio .img_box {
+    cursor: pointer;
+    margin: 15px 0;
+    max-width: 360px;
+    max-height: 288px;
+    width: 100%;
+    height: 100%;
+}
+#portfolio img {
+    width: 100%;
+    height: auto;
+}
+#portfolio .img_hover {
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    max-width: 360px;
+    width: 100%;
+    max-height: 288px;
+    height: 100%;
+    background: url("../img/portfolio/plus.png") center center no-repeat;
+    background-color: rgba(38,39,50,0.5);
+    z-index: 10;
+    opacity: 0;
+}
+#portfolio .img_caption {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 63px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 63px;
+    background-size: 100% 3px;
+    background-color: #fff;
+    z-index: 11;
+}
+#portfolio .img_box:hover .img_hover {
+    opacity: 1;
 }
 /*------------------------ Media ------------------------*/
 @media screen and (max-width: 1199px) {
