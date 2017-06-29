@@ -147,15 +147,14 @@ input, textarea {
 }
 #main .content_row>p {
     font-size: 18px;
-    color: #616161;
     padding: 40px 40px 80px 40px;
 }
-#main #team, #main #pricing {
+#main #focus, #main #team, #main #pricing, #main #blog, #main #subscribe form #mail {
     background-color: #eeeeee;
 }
 /* ------------------------------ Blocks */
 /*------ Center alignment ------*/
-#header h1, #header a, #header #pluses_row {
+#header h1, #header a, #header #pluses_row, #start_promo, #subscribe h4, #subscribe_form {
     display: block;
     margin: 0 auto;
 }
@@ -180,12 +179,13 @@ input, textarea {
 /*---------- fonts -----------*/
 .poppins_reg { font-family: PoppinsRegular; }
 .poppins_med { font-family: PoppinsMedium; }
+.fz_13 { font-size: 13px; }
 .fz_18 { font-size: 18px; }
 .fz_20 { font-size: 20px; }
 .fz_25 { font-size: 25px; }
 /*------ transition all ------*/
 #navigation, #navigation ul li a, .no_scroll ul li a:hover, .scrolled, #header .scrolled ul li a:hover, #header #our_works, #header #our_works:hover,
-#menu_link span:before, #menu_link span:after, #pricing #starter a:hover, #pricing #ultimate a:hover, #pricing #professional a:hover, .start_button {
+#menu_link span:before, #menu_link span:after, #pricing #starter a:hover, #pricing #ultimate a:hover, #pricing #professional a:hover, .start_button, #select #get_started #start_promo a, #select #get_started #start_promo a:hover {
     -webkit-transition: all 0.5s;
        -moz-transition: all 0.5s;
          -o-transition: all 0.5s;
@@ -198,7 +198,7 @@ input, textarea {
             transition: opacity 0.5s;
 }
 /*------ shadow ------*/
-#about_inf, .focus_block, #portfolio .img_box, #team .team_member, .scrolled, .step_block .step_descr, #pricing .price_column {
+#about_inf, .focus_block, #portfolio .img_box, #team .team_member, .scrolled, .step_block .step_descr, #pricing .price_column, #testimonials .single_feedback .img_box img, #testimonials .single_feedback .feedback_box {
     -webkit-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
        -moz-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
             box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
@@ -208,29 +208,40 @@ input, textarea {
 }
 /*------ main color scheme -------*/
 /* Red color*/
-#logo span, #michael, #pricing #ultimate a {
+#logo span, #michael, #pricing #ultimate a, #testimonials .single_feedback .feedback_box #clients_position, #select #get_started #start_promo a, #red_post .author_name, #red_post a {
     color:  #fc5f45;
 }
-#header #our_works, #pricing #ultimate a:hover {
+#header #our_works, #pricing #ultimate a:hover, #select #get_started #start_promo a:hover, #subscribe form #sub_button, #contacts form #send_btn {
     background-color: #fc5f45;
 }
 /* Green color */
-#pluses_row div, #david, #pricing #starter a {
+#pluses_row div, #david, #pricing #starter a, #green_post .author_name, #green_post a, #llc h4 {
     color:  #38c695;
 }
 #pricing #starter a:hover {
     background-color: #38c695;
 }
 /* Purple color */
-#pluses_row #clock, #anna, #pricing #professional a {
+#pluses_row #clock, #anna, #pricing #professional a, #purple_post .author_name, #purple_post a, #llc_uk h4 {
     color:  #b27cf5;
 }
 #pricing #professional a:hover {
     background-color: #b27cf5;
 }
 /* Yellow color */
-#pluses_row #check, #jason {
+#pluses_row #check, #jason, #yellow_post .author_name, #yellow_post a, #follow h4 {
     color:  #feb960;
+}
+/* White color */
+#logo a, .no_scroll ul li a, #header h1, #header #our_works, #pricing #starter a:hover, #pricing #ultimate a:hover, #pricing #professional a:hover, #testimonials .content_row h3, #testimonials .content_row p, #select #get_started #start_promo a:hover, #subscribe form #sub_button, #contacts form #send_btn, #footer .footer_block p {
+    color: #fff;
+}
+.scrolled, #menu_link, #header #our_works:hover, #team .team_member, #team .member_info, #main #steps, #steps .step_block .step_descr, #pricing .price_column, #select #get_started #start_promo a, #blog .blog_post, #subscribe, #contacts form input, #contacts form textarea {
+    background-color: #fff;
+}
+/* Red hover color */
+.no_scroll ul li a:hover, #header .scrolled ul li a:hover {
+    color: #FE8673;
 }
 /*------ 4 colored line -------*/
 .color_line {
@@ -250,29 +261,17 @@ input, textarea {
 .color_line span {
     width: 25%;
 }
-.color_line #red, #michael, #step_01 {
+.color_line #red, #michael, #step_01, #testimonials .single_feedback .feedback_box, #blog .latest_post {
     border-bottom: 3px solid #fc5f45;
 }
-.color_line #green, #david, #step_02 {
+.color_line #green, #david, #step_02, #green_post {
     border-bottom: 3px solid #38c695;
 }
-.color_line #purple, #anna, #step_03 {
+.color_line #purple, #anna, #step_03, #purple_post {
     border-bottom: 3px solid #b27cf5;
 }
-.color_line #yellow, #jason, #step_04 {
+.color_line #yellow, #jason, #step_04, #yellow_post {
     border-bottom: 3px solid #feb960;
-}
-/* ---------------------------- */
-/* White color */
-#logo a, .no_scroll ul li a, #header h1, #header #our_works, #pricing #starter a:hover, #pricing #ultimate a:hover, #pricing #professional a:hover {
-    color: #fff;
-}
-.scrolled, #menu_link, #header #our_works:hover, #team .team_member, #team .member_info, #main #steps, #steps .step_block .step_descr, #pricing .price_column {
-    background-color: #fff;
-}
-/* Red hover color */
-.no_scroll ul li a:hover, #header .scrolled ul li a:hover {
-    color: #FE8673;
 }
 /*------------------------------------- Header -------------------------------------*/
 #header {
@@ -430,7 +429,6 @@ input, textarea {
 /*-------------------------------------- Focus -------------------------------------*/
 #focus {
     background: url("../img/numbers/02.png") center top no-repeat;
-    background-color: #eeeeee;
     text-align: center;
 }
 .focus_block {
@@ -734,6 +732,271 @@ input, textarea {
 #pricing #professional a {
     border: 2px solid #b27cf5;
 }
+/*---------------------------------- Testimonials ----------------------------------*/
+#testimonials {
+    background: url("../img/numbers/07.png") center top no-repeat;
+    background-color: #3f4049;
+}
+#testimonials .content_row #testimonials_section {
+    max-width: 1170px;
+    width: 100%;
+}
+#testimonials #testimonials_section .single_feedback {
+    width: 100%;
+    padding-left: 29.74358974358974%;
+    padding-top: 40px;
+    margin: 0;
+    position: relative;
+}
+#testimonials .single_feedback .img_box {
+    max-width: 32.82051282051282%;
+    height: auto;
+    padding: 10px;
+    background-color: rgba(0,0,0,0.2);
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 30;
+}
+#testimonials .single_feedback .img_box img {
+    width: 100%;
+}
+#testimonials .single_feedback .feedback_box {
+    overflow: hidden;
+    width: 100%;
+    background: url("../img/testimonials/quotes.png") 84px top no-repeat;
+    background-color: #fff;
+    padding: 40px 9.245742092457421% 40px 14.84184914841849%;
+    text-align: left;
+}
+#testimonials .single_feedback .feedback_box p {
+    color: #616161;
+}
+#testimonials .single_feedback .feedback_box #clients_name, #testimonials .single_feedback .feedback_box #clients_signature {
+    color: #272727;
+    margin: 0;
+}
+#testimonials .single_feedback .feedback_box #clients_signature {
+    font-family: Sacramento;
+    font-size: 40px;
+    padding: 30px 0 15px 0;
+}
+#testimonials .single_feedback .feedback_box #clients_position {
+    padding-top: 13px;    
+}
+/*--------------------------------- Why select us ----------------------------------*/
+#select {
+    background: url("../img/numbers/08.png") center top no-repeat;
+}
+#select .select_section {
+    text-align: left;
+    padding: 25px 10px;
+    background: url("../img/select_us/growth.svg") 10px 25px no-repeat;
+}
+#select #revisions { background: url("../img/select_us/revisions.svg") 10px 25px no-repeat; }
+#select #perfection { background: url("../img/select_us/perfection.svg") 10px 25px no-repeat; }
+#select #experience { background: url("../img/select_us/experience.svg") 10px 25px no-repeat; }
+#select #deadline { background: url("../img/select_us/deadline.svg") 10px 25px no-repeat; }
+#select #award { background: url("../img/select_us/award.svg") 20px 25px no-repeat; }
+#select h4 {
+    padding-left: 60px;
+    line-height: 26px;
+}
+#select p {
+    padding: 20px 0;
+}
+#select #get_started {
+    width: 100%;
+    padding: 15px 0 160px 0;
+}
+#select #get_started #start_promo h4, #select #get_started #start_promo a {
+    display: inline-block;
+}
+#select #get_started #start_promo h4 {
+    padding: 0 24px 0 0;
+}
+#select #get_started #start_promo a {
+    border: 2px solid #fc5f45;
+}
+/*------------------------------------- Blog ---------------------------------------*/
+#blog {
+    background: url("../img/numbers/09.png") center top no-repeat;
+}
+#blog .blog_post {
+    width: 100%;
+    padding: 33px 38px;
+    text-align: left;
+}
+#blog .blog_post h4 {
+    padding: 21px 0;
+}
+#blog .blog_post .post_text { line-height: 18px; }
+#blog .blog_post .author_name {
+    font-family: PoppinsMedium;
+    padding-right: 25px;
+}
+#blog .latest_post {
+    padding: 0;
+    position: relative;
+}
+#blog .latest_post #post_info {
+    padding: 10px 53px 42px 53px;
+}
+#blog .latest_post #post_info h4 {
+    line-height: 35px;
+}
+#blog .latest_post #post_info #img_caption {
+    position: absolute;
+    top: 397px;
+    left: 53px;
+}
+#green_post, #purple_post {
+    margin-bottom: 20px;
+}
+/*---------------------- Subscribe ----------------------*/
+#subscribe {
+    width: 100%;
+    padding: 149px 0;
+}
+#subscribe h4 { 
+    font-size: 30px;
+    padding-bottom: 53px;
+}
+#subscribe h4, #subscribe_form {
+    overflow: hidden;
+}
+#subscribe #subscribe_form {
+    max-width: 480px;
+}
+#subscribe form #mail {
+/*    background-color:  #eeeeee;*/
+    width: 300px;
+    height: 50px;
+    border-radius: 25px 0 0 25px;
+    padding-left: 29px;
+    border: none;
+    font-size: 16px;
+    float: left;
+}
+#subscribe form #sub_button {
+    padding: 0;
+/*    background-color:  #fc5f45;*/
+    width: 180px;
+    height: 50px;
+/*    color: #fff;*/
+    border-radius: 0 25px 25px 0;
+    border: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    float: left;
+}
+/*----------------------------------- Contacts -------------------------------------*/
+#contacts {
+    background: url("../img/numbers/10.png") center top no-repeat;
+    background-color: #cdcdcd;
+}
+#contacts form {
+    max-width: 750px;
+    margin: 0 auto;
+}
+#contacts form .form_row {
+    width: 100%;
+    overflow: hidden;
+    padding: 12px 0;
+}
+#contacts form .submit_row{
+    width: 100%;
+    padding: 50px 0 150px 0;
+}
+#contact_name, #contact_subject { float: left; }
+#contact_mail, #contact_budget { float: right; }
+#contacts form input, #contacts form textarea {
+    max-width: 360px;
+    width: 100%;
+    border-radius: 4px;
+    border-style: solid;
+    border-width: 1px;
+    border-color:  #efefef;
+    box-sizing: border-box;
+/*    background-color:  #ffffff;*/
+    height: 50px;
+    text-align: left;
+    display: block;
+    padding-left: 10px;
+}
+#contacts form textarea {
+    padding: 10px;
+    resize: none;
+}
+#contacts form #send_btn {
+/*    background-color:  #fc5f45;*/
+    max-width: none;
+    width: 190px;
+    border: none;
+    border-radius: 25px;
+    text-transform: uppercase;
+    font-weight: 600;
+/*    color: #fff;*/
+    text-align: center;
+    margin: 0 auto;
+}
+/* --- make text-align centered, but in focus left aligned ---*/
+#contacts form input:-moz-placeholder, #contacts form textarea:-moz-placeholder {
+    color: #999999;
+    text-align: center;
+}
+#contacts form input::-moz-placeholder, #contacts form textarea::-moz-placeholder {
+    color: #999999;
+    text-align: center;
+}
+#contacts form input:-ms-input-placeholder, #contacts form textarea:-ms-input-placeholder {
+    color: #999999;
+    text-align: center;
+}
+#contacts form input::-webkit-input-placeholder, #contacts form textarea::-webkit-input-placeholder {
+    color: #999999;
+    text-align: center;
+}
+#contacts form #contact_message {
+    max-width: none;
+    height: 200px;
+}
+/*----------------------- Footer ------------------------*/
+#footer {
+    background-color: #3f404a;
+    overflow: hidden;
+}
+#footer .footer_block {
+    width: 25%;
+    float: left;
+    text-align: left;
+    height: 100%;
+    padding: 60px 40px;
+}
+#footer #logo { padding: 80px 40px;}
+#footer h4 {
+    padding-bottom: 40px;
+    font-family: PoppinsMedium;
+    font-size: 18px;
+}
+#footer p {
+    font-size: 16px;
+}
+#follow ul li {
+    float: left;
+    display: block;
+}
+#follow ul li {
+    padding-right: 7px;
+}
+#follow ul li a>div {
+    width: 30px;
+    height: 31px;
+}
+#follow #facebook { background: url(../img/footer/facebook.svg) center top no-repeat;}
+#follow #twitter { background: url(../img/footer/twitter.svg) center top no-repeat;}
+#follow #instagram { background: url(../img/footer/instagram.svg) center top no-repeat;}
+#follow #google_plus { background: url(../img/footer/google_plus.svg) center top no-repeat;}
 /*------------------------ Media ------------------------*/
 @media screen and (max-width: 1199px) {
     
