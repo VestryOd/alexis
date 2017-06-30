@@ -52,6 +52,7 @@ $(document).ready(function() {
     
     var menuLink = $("#menu_link");
     var menu = $("#header #navigation ul");
+    console.log(menu);
     
     menuLink.click(function() {
         menuLink.toggleClass("menu_active");
