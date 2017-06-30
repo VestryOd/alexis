@@ -130,6 +130,10 @@ input, textarea {
     line-height: 27px;
     color:  #616161;
 }
+#main h4 {
+    font-family: PoppinsMedium;
+    font-size: 20px;
+}
 .section {
     overflow: hidden;
     background-color: #fff;
@@ -158,14 +162,7 @@ input, textarea {
     display: block;
     margin: 0 auto;
 }
-/*------ Left alignment ------*/
-#logo, #pluses_row div, .color_line span {
-    float: left;
-}
-/*------ Right alignment ------*/
-#navigation ul {
-    float: right;
-}
+/* ---------------- */
 .content_row h3 {
     font-family: LibreBaskervilleBold;
     font-size: 50px;
@@ -176,13 +173,6 @@ input, textarea {
     margin-top: 50px;
 }
 /* ------------------------------ Cosmetics */
-/*---------- fonts -----------*/
-.poppins_reg { font-family: PoppinsRegular; }
-.poppins_med { font-family: PoppinsMedium; }
-.fz_13 { font-size: 13px; }
-.fz_18 { font-size: 18px; }
-.fz_20 { font-size: 20px; }
-.fz_25 { font-size: 25px; }
 /*------ transition all ------*/
 #navigation, #navigation ul li a, .no_scroll ul li a:hover, .scrolled, #header .scrolled ul li a:hover, #header #our_works, #header #our_works:hover,
 #menu_link span:before, #menu_link span:after, #pricing #starter a:hover, #pricing #ultimate a:hover, #pricing #professional a:hover, .start_button, #select #get_started #start_promo a, #select #get_started #start_promo a:hover {
@@ -260,6 +250,7 @@ input, textarea {
 }
 .color_line span {
     width: 25%;
+    float: left;
 }
 .color_line #red, #michael, #step_01, #testimonials .single_feedback .feedback_box, #blog .latest_post {
     border-bottom: 3px solid #fc5f45;
@@ -289,12 +280,18 @@ input, textarea {
     padding: 0 15px;
 }
 #logo {
+    float: left;
+}
+#logo {
     font-family: Wisdom;
     font-size: 35px;
     line-height: 75px;
 }
 #logo span {
     text-transform: uppercase;
+}
+#navigation ul {
+    float: right;
 }
 #navigation ul li {
     display: inline-block;   
@@ -385,6 +382,7 @@ input, textarea {
     padding: 85px 0 0 0;
 }
 #pluses_row div {
+    float: left;
     text-align: center;
     font-family: PoppinsMedium;
     font-size: 18px;
@@ -587,24 +585,28 @@ input, textarea {
     margin: 0 auto;
     overflow: hidden;
 }
-#stats .regard { margin: 20px 0; }
-#stats .regard p {
+#stats .regard {
+    margin: 20px 0;
+}
+#stats .regard p, #stats .regard .progress {
     color: rgba(254, 254, 254, 0.8);
     text-align: center;
 }
-#stats .regard .poppins_med {
+#stats .regard .achieves {
     padding: 80px 0 15px 0;
     background: url("../img/stats/project.svg") center top no-repeat;
+    font-family: PoppinsMedium;
+    font-size: 20px;
 }
 #stats .regard .color_dot {
     padding: 15px 0 55px 0;
     background: url("../img/stats/red-ring.svg") center bottom no-repeat;
 }
-#stats #clients .poppins_med { background: url("../img/stats/clients.svg") center top no-repeat; }
+#stats #clients .achieves { background: url("../img/stats/clients.svg") center top no-repeat; }
 #stats #clients .color_dot { background: url("../img/stats/green-ring.svg")center bottom no-repeat; }
-#stats #feedbacks .poppins_med { background: url("../img/stats/feeds.svg") center top no-repeat; }
+#stats #feedbacks .achieves { background: url("../img/stats/feeds.svg") center top no-repeat; }
 #stats #feedbacks .color_dot { background: url("../img/stats/purple-ring.svg")center bottom no-repeat; }
-#stats #freebies .poppins_med { background: url("../img/stats/bies.svg") center top no-repeat; }
+#stats #freebies .achieves { background: url("../img/stats/bies.svg") center top no-repeat; }
 #stats #freebies .color_dot { background: url("../img/stats/yellow-ring.svg")center bottom no-repeat; }
 /*---------------------------------- How we work -----------------------------------*/
 #steps {
@@ -636,6 +638,8 @@ input, textarea {
 }
 .step_block .step_descr h4 {
     padding-bottom: 24px;
+    font-family: PoppinsRegular;
+    font-size: 25px;
 }
 .step_block #step_01, .step_block #step_03 {
     left: 0;
@@ -668,7 +672,9 @@ input, textarea {
 #pricing #professional {
     border-top: 3px solid #b27cf5;
 }
-#pricing .price_column h4 { padding-bottom: 32px; }
+#pricing .price_column h4 {
+    padding-bottom: 32px;
+}
 #pricing .price_column ul {
     font-family: PoppinsRegular;
     font-size: 15px;
@@ -772,6 +778,13 @@ input, textarea {
 #testimonials .single_feedback .feedback_box p {
     color: #616161;
 }
+#testimonials .single_feedback .feedback_box #clients_name {
+    font-family: PoppinsMedium;
+    font-size: 18px;
+}
+#testimonials .single_feedback .feedback_box #clients_position {
+    font-size: 13px;
+}
 #testimonials .single_feedback .feedback_box #clients_name, #testimonials .single_feedback .feedback_box #clients_signature {
     color: #272727;
     margin: 0;
@@ -799,6 +812,7 @@ input, textarea {
 #select #deadline { background: url("../img/select_us/deadline.svg") 10px 25px no-repeat; }
 #select #award { background: url("../img/select_us/award.svg") 20px 25px no-repeat; }
 #select h4 {
+    font-size: 18px;
     padding-left: 60px;
     line-height: 26px;
 }
@@ -813,6 +827,7 @@ input, textarea {
     display: inline-block;
 }
 #select #get_started #start_promo h4 {
+    font-size: 25px;
     padding: 0 24px 0 0;
 }
 #select #get_started #start_promo a {
@@ -827,10 +842,18 @@ input, textarea {
     padding: 33px 38px;
     text-align: left;
 }
+#blog .blog_post .post_date {
+    font-size: 13px;
+}
 #blog .blog_post h4 {
     padding: 21px 0;
 }
-#blog .blog_post .post_text { line-height: 18px; }
+#blog .blog_post {
+    font-size: 15px;
+}
+#blog .blog_post .post_text {
+    line-height: 18px;
+}
 #blog .blog_post .author_name {
     font-family: PoppinsMedium;
     padding-right: 25px;
@@ -858,7 +881,8 @@ input, textarea {
     width: 100%;
     padding: 149px 0;
 }
-#subscribe h4 { 
+#subscribe h4 {
+    font-family: PoppinsMedium;
     font-size: 30px;
     padding-bottom: 53px;
 }
@@ -869,7 +893,6 @@ input, textarea {
     max-width: 480px;
 }
 #subscribe form #mail {
-/*    background-color:  #eeeeee;*/
     width: 300px;
     height: 50px;
     border-radius: 25px 0 0 25px;
@@ -880,10 +903,8 @@ input, textarea {
 }
 #subscribe form #sub_button {
     padding: 0;
-/*    background-color:  #fc5f45;*/
     width: 180px;
     height: 50px;
-/*    color: #fff;*/
     border-radius: 0 25px 25px 0;
     border: none;
     text-transform: uppercase;
@@ -908,8 +929,12 @@ input, textarea {
     width: 100%;
     padding: 50px 0 150px 0;
 }
-#contact_name, #contact_subject { float: left; }
-#contact_mail, #contact_budget { float: right; }
+#contact_name, #contact_subject {
+    float: left;
+}
+#contact_mail, #contact_budget {
+    float: right;
+}
 #contacts form input, #contacts form textarea {
     max-width: 360px;
     width: 100%;
@@ -918,7 +943,6 @@ input, textarea {
     border-width: 1px;
     border-color:  #efefef;
     box-sizing: border-box;
-/*    background-color:  #ffffff;*/
     height: 50px;
     text-align: left;
     display: block;
@@ -929,16 +953,15 @@ input, textarea {
     resize: none;
 }
 #contacts form #send_btn {
-/*    background-color:  #fc5f45;*/
     max-width: none;
     width: 190px;
     border: none;
     border-radius: 25px;
     text-transform: uppercase;
     font-weight: 600;
-/*    color: #fff;*/
     text-align: center;
     margin: 0 auto;
+    font-size: 15px;
 }
 /* --- make text-align centered, but in focus left aligned ---*/
 #contacts form input:-moz-placeholder, #contacts form textarea:-moz-placeholder {
@@ -973,10 +996,11 @@ input, textarea {
     height: 100%;
     padding: 60px 40px;
 }
-#footer #logo { padding: 80px 40px;}
+#footer #logo {
+    padding: 80px 40px;
+}
 #footer h4 {
     padding-bottom: 40px;
-    font-family: PoppinsMedium;
     font-size: 18px;
 }
 #footer p {
@@ -993,11 +1017,11 @@ input, textarea {
     width: 30px;
     height: 31px;
 }
-#follow #facebook { background: url(../img/footer/facebook.svg) center top no-repeat;}
-#follow #twitter { background: url(../img/footer/twitter.svg) center top no-repeat;}
-#follow #instagram { background: url(../img/footer/instagram.svg) center top no-repeat;}
-#follow #google_plus { background: url(../img/footer/google_plus.svg) center top no-repeat;}
-/*------------------------ Media ------------------------*/
+#follow #facebook { background: url(../img/footer/facebook.svg) center top no-repeat; }
+#follow #twitter { background: url(../img/footer/twitter.svg) center top no-repeat; }
+#follow #instagram { background: url(../img/footer/instagram.svg) center top no-repeat; }
+#follow #google_plus { background: url(../img/footer/google_plus.svg) center top no-repeat; }
+/*------------------------------------- Media --------------------------------------*/
 @media screen and (max-width: 1199px) {
     
 }
