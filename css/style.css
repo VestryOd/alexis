@@ -656,6 +656,7 @@ input, textarea {
     background: url("../img/numbers/06.png") center top no-repeat;
 }
 #pricing .price_column {
+    max-width: 360px;
     border-top: 3px solid #38c695;
     padding: 40px 0;
 }
@@ -798,6 +799,7 @@ input, textarea {
     text-align: left;
     padding: 25px 10px;
     background: url("../img/select_us/growth.svg") 10px 25px no-repeat;
+    min-height: 250px;
 }
 #select #revisions { background: url("../img/select_us/revisions.svg") 10px 25px no-repeat; }
 #select #perfection { background: url("../img/select_us/perfection.svg") 10px 25px no-repeat; }
@@ -821,7 +823,7 @@ input, textarea {
 }
 #select #get_started #start_promo h4 {
     font-size: 25px;
-    padding: 0 24px 0 0;
+    padding: 0 0 24px 0;
 }
 #select #get_started #start_promo a {
     border: 2px solid #fc5f45;
@@ -1138,6 +1140,26 @@ input, textarea {
     #footer #logo {
         padding: 30px 40px;
         line-height: 0;
+    }
+    /*  stats  */
+    #stats .stats_wrapper {
+        margin: 30px 0;
+    }
+    /*  steps  */
+    #steps .step_block .step_descr {
+        background-color: rgba(255,255,255,.8);
+    }
+    /*  pricing  */
+    #pricing .pricing_wrapper {
+        margin: 50px 0;
+    }
+    #pricing .price_column {
+        float: none;
+        margin: 0 auto;
+    }
+    /*  select  */
+    #select .select_wrapper {
+        margin: 20px 0;
     }
 }
 @media screen and (max-width: 479px) {
