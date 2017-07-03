@@ -497,6 +497,7 @@ input, textarea {
     background: url("../img/numbers/04.png") center top no-repeat;
 }
 #team .team_member {
+    max-width: 263px;
     padding: 5px;
     display: block;
     cursor: pointer;
@@ -1110,11 +1111,33 @@ input, textarea {
         margin: 40px 0;
         padding: 0 10%;
     }
-    #focus .focus_wrapper:first-of-type {
+    #focus .focus_wrapper:first-of-type, #team .team_wrapper:first-of-type {
         margin-top: 0;
     }
-    #focus .focus_wrapper:last-of-type {
+    #focus .focus_wrapper:last-of-type, #team .team_wrapper:last-of-type {
         margin-bottom: 0;
+    }
+    /*  team  */
+    #team .team_wrapper {
+        float: none;
+        width: 293px;
+        margin: 50px auto;
+    }
+    /*  footer  */
+    #footer .footer_block {
+        width: 100%;
+        float: none;
+        padding: 30px 40px;
+    }
+    #footer .footer_block h4 {
+        padding-bottom: 20px;
+    }
+    #footer .footer_block ul {
+        padding-bottom: 30px;
+    }
+    #footer #logo {
+        padding: 30px 40px;
+        line-height: 0;
     }
 }
 @media screen and (max-width: 479px) {
