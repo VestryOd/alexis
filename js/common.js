@@ -36,19 +36,33 @@ $(document).ready(function() {
         $('body,html').animate({scrollTop: top}, 1500);
     });
     
-    var teamMembersSet = $("#team .team_member");
-    var meberInfoSet = $("#team .member_info");
-    
-    $("#team_members").on("click", ".team_member", function() {
-        var n = teamMembersSet.index(this);
-        console.log(n);
-        $("#team .team_member .triangle").fadeOut(500, function() {
-            $(teamMembersSet[n]).find(".triangle").fadeIn(500);
-        });
-        $(meberInfoSet).fadeOut(500, function() {
-            $(meberInfoSet[n]).fadeIn(500);
-        });
-    });
+//    var teamMembersSet = $("#team .team_member");
+//    var meberInfoSet = $("#team .member_info");
+//    
+//    $("#team_members").on("click", ".team_member", function() {
+//        var n = teamMembersSet.index(this);
+//        console.log(n);
+//        $("#team .team_member .triangle").fadeOut(500, function() {
+//            $(teamMembersSet[n]).find(".triangle").fadeIn(500);
+//        });
+//        $(meberInfoSet).fadeOut(500, function() {
+//            $(meberInfoSet[n]).fadeIn(500);
+//        });
+//    });
+//    var currentMember = $("#team .team_member .active .triangle");
+//    var teamMembersSet = $("#team .team_member");
+//    var memberInfoSet = $("#team .member_info");
+//    
+//    $("#team_members").on("click", ".team_member", function() {
+//        if( win_w >= 992) {
+//            var n = teamMembersSet.index(this);
+//            console.log(n);
+//            console.log(memberInfoSet[n]);
+//            $("#team_members .active .triangle").fadeOut("slow").removeClass("active").parents("row").find(teamMembersSet[n]).parents(".content_row").find(memberInfoSet[n]).fadeIn("slow").addClass("active");
+//        } else {
+//            console.log('nooo!');
+//        }
+//    });
     
     var menuLink = $("#menu_link");
     var menu = $("#header #navigation ul");

@@ -520,24 +520,48 @@ input, textarea {
     padding: 80px 100px;
     text-align: left;
     position: relative;
+/*    overflow: hidden;*/
     display: none;
 }
-.about_member {
-    padding-right: 130px;
+.member_info:after {
+    content: '';
+    clear: both;
+    display: block;
 }
 .about_member h4 {
     padding-bottom: 35px;
 }
 .about_member p {
-    padding-right: 180px;
-    border-right: 2px solid #efefef;
-    background: url(../img/team/share.svg) 95.83333333333333% center no-repeat;
+    float: left;
+    max-width: 660px;
+    width: 100%;
 }
 .member_links {
-    position: absolute;
-    right: 100px;
-    top: 135px;
-    padding: 24px;
+    overflow: hidden;
+    max-width: 310px;
+    width: 100%;
+    float: right;
+    padding-left: 50px;
+}
+.member_links .share {
+    float: left;
+    max-width: 130px;
+    width: 100%;
+    height: 150px;
+    border-right: 2px solid #efefef;
+    padding: 57px 0;
+}
+.member_links .share .share_icon {
+    display: block;
+    margin: 0 auto;
+    width: 36px;
+    height: 36px;
+    background: url(../img/team/share.svg) center center no-repeat;
+}
+.member_links ul {
+    float: left;
+    padding-left: 24px;
+    width: 130px;
 }
 .member_links ul li {
     padding: 3px;
@@ -558,15 +582,18 @@ input, textarea {
 .triangle {
     content: '';
     border: 40px solid transparent;
-    border-bottom-color: #fff;
+    border-bottom-color: red;
     position: absolute;
-    left: 36.66666666666667%;
-    bottom: -50px;
+/*    left: 91.5px;*/
+    left: 384.5px;
+    top: -80px;
 }
+/*
 #david .triangle, #anna .triangle, #jason .triangle {
     display: none;
 }
-.show {
+*/
+.active {
     display: block;
 }
 /*------------------------------------- Stats --------------------------------------*/
