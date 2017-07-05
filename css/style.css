@@ -496,6 +496,9 @@ input, textarea {
 #team {
     background: url("../img/numbers/04.png") center top no-repeat;
 }
+#team .team_wrapper {
+    position: relative;
+}
 #team .team_member {
     max-width: 263px;
     padding: 5px;
@@ -582,17 +585,16 @@ input, textarea {
 .triangle {
     content: '';
     border: 40px solid transparent;
-    border-bottom-color: red;
+    border-bottom-color: #fff;
     position: absolute;
-/*    left: 91.5px;*/
-    left: 384.5px;
-    top: -80px;
+    left: 36.66666666666667%;
+    bottom: -50px;
 }
-/*
+
 #david .triangle, #anna .triangle, #jason .triangle {
     display: none;
 }
-*/
+
 .active {
     display: block;
 }
@@ -602,7 +604,7 @@ input, textarea {
     width: 100%;
 }
 #main #stats .regerds_row {
-    padding: 110px 0;
+    padding: 80px 0;
     max-width: 1200px;
     margin: 0 auto;
     overflow: hidden;
@@ -683,6 +685,7 @@ input, textarea {
     background: url("../img/numbers/06.png") center top no-repeat;
 }
 #pricing .price_column {
+    max-width: 360px;
     border-top: 3px solid #38c695;
     padding: 40px 0;
 }
@@ -1165,6 +1168,26 @@ input, textarea {
     #footer #logo {
         padding: 30px 40px;
         line-height: 0;
+    }
+    /*  stats  */
+    #stats .stats_wrapper {
+        margin: 30px 0;
+    }
+    /*  steps  */
+    #steps .step_block .step_descr {
+        background-color: rgba(255,255,255,.8);
+    }
+    /*  pricing  */
+    #pricing .pricing_wrapper {
+        margin: 50px 0;
+    }
+    #pricing .price_column {
+        float: none;
+        margin: 0 auto;
+    }
+    /*  select  */
+    #select .select_wrapper {
+        margin: 20px 0;
     }
 }
 @media screen and (max-width: 479px) {

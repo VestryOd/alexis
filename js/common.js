@@ -49,24 +49,27 @@ $(document).ready(function() {
 //            $(meberInfoSet[n]).fadeIn(500);
 //        });
 //    });
-//    var currentMember = $("#team .team_member .active .triangle");
-//    var teamMembersSet = $("#team .team_member");
-//    var memberInfoSet = $("#team .member_info");
-//    
-//    $("#team_members").on("click", ".team_member", function() {
-//        if( win_w >= 992) {
-//            var n = teamMembersSet.index(this);
-//            console.log(n);
-//            console.log(memberInfoSet[n]);
-//            $("#team_members .active .triangle").fadeOut("slow").removeClass("active").parents("row").find(teamMembersSet[n]).parents(".content_row").find(memberInfoSet[n]).fadeIn("slow").addClass("active");
-//        } else {
-//            console.log('nooo!');
-//        }
-//    });
+    var teamMembersSet = $("#team .team_member");
+    var memberInfoSet = $("#team .member_info");
+    
+    $("#team_members").on("click", ".team_member", function() {
+        if( win_w >= 992) {
+            var currentMember = this;
+            var n = teamMembersSet.index(this);
+            console.log(n);
+            console.log(currentMember);
+            $("#team #team_members .active").fadeOut(500).removeClass("active").parents("#team_members")
+                .find(teamMembersSet[n]).find(".triangle").fadeIn(500).addClass("active");
+            $("#team .mrg_top_50 .active").fadeOut(300).removeClass("active").parents(".mrg_top_50")
+                .find(memberInfoSet[n]).fadeIn(500).addClass("active");
+        } else {
+            console.log('nooo!');
+        }
+    });
     
     var menuLink = $("#menu_link");
     var menu = $("#header #navigation ul");
-    console.log(menu);
+//    console.log(menu);
     
     menuLink.click(function() {
         menuLink.toggleClass("menu_active");
