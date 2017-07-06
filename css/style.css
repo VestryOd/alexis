@@ -515,8 +515,10 @@ input, textarea {
     padding: 80px 100px;
     text-align: left;
     position: relative;
-/*    overflow: hidden;*/
     display: none;
+}
+.about_member {
+    max-width: 73.19587628865979%;
 }
 .member_info:after {
     content: '';
@@ -528,20 +530,19 @@ input, textarea {
 }
 .about_member p {
     float: left;
-    max-width: 660px;
     width: 100%;
 }
 .member_links {
     overflow: hidden;
-    max-width: 310px;
+    max-width: 26.80412371134021%;
     width: 100%;
     float: right;
-    padding-left: 50px;
+/*    padding-left: 50px;*/
 }
 .member_links .share {
     float: left;
-    max-width: 130px;
-    width: 100%;
+/*    max-width: 130px;*/
+    width: 50%;
     height: 150px;
     border-right: 2px solid #efefef;
     padding: 57px 0;
@@ -555,8 +556,8 @@ input, textarea {
 }
 .member_links ul {
     float: left;
-    padding-left: 24px;
-    width: 130px;
+    padding-left: 9.230769230769231%;
+    width: 50%;
 }
 .member_links ul li {
     padding: 3px;
@@ -843,7 +844,7 @@ input, textarea {
 }
 #select #get_started #start_promo h4 {
     font-size: 25px;
-    padding: 0 0 24px 0;
+    padding: 24px;
 }
 #select #get_started #start_promo a {
     border: 2px solid #fc5f45;
@@ -947,16 +948,16 @@ input, textarea {
     width: 100%;
     padding: 50px 0 150px 0;
 }
-#contact_name, #contact_subject {
+#contacts form #contact_name, #contacts form #contact_subject {
     float: left;
-    margin-right: 15px;
+    margin-right: 2%;
 }
-#contact_mail, #contact_budget {
+#contacts form #contact_mail, #contacts form #contact_budget {
     float: right;
-    margin-left: 15px;
+    margin-left: 2%;
 }
 #contacts form input, #contacts form textarea {
-    max-width: 50%;
+    max-width: 46%;
     width: 100%;
     border-radius: 4px;
     border-style: solid;
@@ -1121,6 +1122,7 @@ input, textarea {
     }
 }
 @media screen and (max-width: 767px){
+    /*  pluses  */
     #pluses_row {
         max-width: none;
         width: 100%;
@@ -1206,6 +1208,9 @@ input, textarea {
     /*  select  */
     #select .select_wrapper {
         margin: 20px 0;
+    }
+    #select .content_row .row>div:nth-child(odd) {
+        clear: both;
     }
 }
 @media screen and (max-width: 479px) {
