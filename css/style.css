@@ -453,24 +453,16 @@ input, textarea {
 #portfolio .img_box {
     cursor: pointer;
     margin: 15px 0;
-    max-width: 360px;
-    max-height: 288px;
-    width: 100%;
-    height: 100%;
 }
 #portfolio img {
     width: 100%;
-    height: auto;
 }
 #portfolio .img_hover {
     position: absolute;
     left: 15px;
     top: 15px;
-/*    margin: 0 auto;*/
-    max-width: 360px;
-    width: 100%;
-    max-height: 288px;
-    height: 100%;
+    right: 15px;
+    bottom: 15px;
     background: url("../img/portfolio/plus.png") center center no-repeat;
     background-color: rgba(38,39,50,0.5);
     z-index: 10;
@@ -851,7 +843,7 @@ input, textarea {
 }
 #select #get_started #start_promo h4 {
     font-size: 25px;
-    padding: 0 24px 0 0;
+    padding: 0 0 24px 0;
 }
 #select #get_started #start_promo a {
     border: 2px solid #fc5f45;
@@ -946,7 +938,10 @@ input, textarea {
 #contacts form .form_row {
     width: 100%;
     overflow: hidden;
-    padding: 12px 0;
+/*    padding: 12px 0;*/
+}
+#contacts .form_row input, #contacts .form_row textarea {
+    margin: 12px 0;
 }
 #contacts form .submit_row{
     width: 100%;
@@ -954,12 +949,14 @@ input, textarea {
 }
 #contact_name, #contact_subject {
     float: left;
+    margin-right: 15px;
 }
 #contact_mail, #contact_budget {
     float: right;
+    margin-left: 15px;
 }
 #contacts form input, #contacts form textarea {
-    max-width: 360px;
+    max-width: 50%;
     width: 100%;
     border-radius: 4px;
     border-style: solid;
@@ -1152,6 +1149,27 @@ input, textarea {
         float: none;
         width: 293px;
         margin: 50px auto;
+    }
+    #team .member_info {
+        padding: 40px;
+    }
+    #team .member_info .member_links {
+        padding-left: 0;
+        padding: 40px 0;
+    }
+    #team .member_info .about_member, #team .member_info .member_links {
+        float: none;
+    }
+    .member_links .share {
+        float: left;
+        max-width: none;
+        width: 72px;
+        height: 150px;
+        border-right: 2px solid #efefef;
+        padding: 57px 0;
+    }
+    .member_links .share .share_icon {
+        margin: 0;
     }
     /*  footer  */
     #footer .footer_block {
