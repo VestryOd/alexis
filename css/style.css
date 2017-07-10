@@ -765,10 +765,16 @@ input, textarea {
 }
 #testimonials #testimonials_section .single_feedback {
     width: 100%;
-    padding-left: 29.74358974358974%;
-    padding-top: 40px;
+    padding: 0 10px;
+/*    padding-left: 29.74358974358974%;*/
+    padding-top: 35px;
     margin: 0;
     position: relative;
+}
+#testimonials #testimonials_section .single_feedback:after {
+    content: '';
+    clear: both;
+    display: block;
 }
 #testimonials .single_feedback .img_box {
     max-width: 32.82051282051282%;
@@ -784,11 +790,13 @@ input, textarea {
     width: 100%;
 }
 #testimonials .single_feedback .feedback_box {
+    float: right;
     overflow: hidden;
+    max-width: 850px;
     width: 100%;
     background: url("../img/testimonials/quotes.png") 84px top no-repeat;
     background-color: #fff;
-    padding: 40px 9.245742092457421% 40px 14.84184914841849%;
+    padding: 40px 6.41025641025641% 40px 10.25641025641026%;
     text-align: left;
 }
 #testimonials .single_feedback .feedback_box p {
@@ -1162,6 +1170,11 @@ input, textarea {
     #team .member_info .about_member, #team .member_info .member_links {
         float: none;
     }
+    #team .about_member, #team .member_links {
+        max-width: none;
+        width: 100%;
+        overflow: hidden;
+    }
     .member_links .share {
         float: left;
         max-width: none;
@@ -1169,6 +1182,9 @@ input, textarea {
         height: 150px;
         border-right: 2px solid #efefef;
         padding: 57px 0;
+    }
+    .member_links ul {
+        float: left;
     }
     .member_links .share .share_icon {
         margin: 0;
