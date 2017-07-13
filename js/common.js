@@ -2,8 +2,10 @@ $(document).ready(function() {
    
     var win_w = $(window).width();
     var win_h = $(window).height();
+    var body_w = $("body").width();
     console.log(win_w);
     console.log(win_h);
+    console.log(body_w);
     
     //header nav offset top
     var navOffsetTop = $("#navigation").offset().top;
@@ -53,7 +55,7 @@ $(document).ready(function() {
     var memberInfoSet = $("#team .member_info");
     
     $("#team_members").on("click", ".team_member", function() {
-        if( win_w >= 992) {
+        if( ($("body").width()) >= 992) {
             var currentMember = this;
             var n = teamMembersSet.index(this);
             console.log(n);
@@ -79,5 +81,10 @@ $(document).ready(function() {
     menu.on("click", "a", function() {
         menuLink.toggleClass("menu_active");
         menu.toggleClass("menu_show");
+    });
+    
+    $('.testimonials_bxslider').bxSlider({
+      auto: true,
+      autoControls: true
     });
 });
