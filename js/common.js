@@ -84,7 +84,10 @@ $(document).ready(function() {
     });
     
     $('.testimonials_bxslider').bxSlider({
-      auto: true,
-      autoControls: true
+        auto: true,
+        autoControls: false,
+        stopAutoOnClick: true,
+        pager: false,
+        slideWidth: 1170
     });
 });

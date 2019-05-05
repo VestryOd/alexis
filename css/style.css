@@ -769,6 +769,7 @@ input, textarea {
     padding-left: 29.74358974358974%;
     padding-top: 35px;
     margin: 0;
+    margin-bottom: 35px;
     position: relative;
 }
 #testimonials #testimonials_section .single_feedback:after {
